@@ -7,13 +7,13 @@ SELECT DISTINCT name FROM albums WHERE artist = 'Pink Floyd';
 SELECT 'Albums release date by Sgt. Pepper' AS 'Info';
 SELECT DISTINCT release_date FROM albums WHERE name = 'Sgt. Peppers Lonely Hearts Club Band';
 
-SELECT 'Genre for the album name Nevermind';
+SELECT 'Genre for the album name Nevermind' AS 'Info';
 SELECT genre FROM albums WHERE name = 'Nevermind';
 
-SELECT 'Albums released between 1990 and 1999';
+SELECT 'Albums released between 1990 and 1999' AS 'Info';
 SELECT * FROM albums WHERE release_date BETWEEN 1990 and 1999;
 
-SELECT AS 'Albums where sales < 20'
+SELECT 'Albums where sales < 20' AS 'INFO';
 SELECT * FROM albums WHERE sales < 20;
 
 -- PROGRESSIVE ROCK does not show because you need another keyword
