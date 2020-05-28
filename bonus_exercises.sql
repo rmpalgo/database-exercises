@@ -19,8 +19,10 @@ FROM employees;
 SELECT * FROM titles
 WHERE title = 'Engineer';
 
-SELECT title, COUNT(title) AS 'count'
+SELECT title, COUNT(title) AS count
 FROM titles GROUP BY title
 ORDER BY count DESC
-LIMIT 1;
+LIMIT 3;
+
+
 
