@@ -25,5 +25,17 @@ employees WHERE emp_no IN(
     AND gender = 'F'
     );
 
+-- BONUS
+
+SELECT dept_name FROM departments
+WHERE dept_no IN (
+    SELECT dept_no FROM dept_manager
+    WHERE emp_no IN (
+        SELECT emp_no FROM employees
+        WHERE gender = 'F'
+        )
+    AND dept_manager.to_date > CURDATE()
+    );
+
 
 
