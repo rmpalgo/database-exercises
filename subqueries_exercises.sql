@@ -37,5 +37,12 @@ WHERE dept_no IN (
     AND dept_manager.to_date > CURDATE()
     );
 
+SELECT first_name, last_name FROM employees
+WHERE emp_no IN (
+    SELECT emp_no FROM salaries
+    WHERE salary IN (
+        SELECT MAX(salary) FROM salaries
+        )
+          );
 
 
