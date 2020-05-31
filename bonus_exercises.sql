@@ -24,5 +24,10 @@ FROM titles GROUP BY title
 ORDER BY count DESC
 LIMIT 3;
 
+SELECT dept_emp.emp_no, titles.title, titles.from_date FROM dept_emp
+JOIN titles ON titles.emp_no = dept_emp.emp_no
+WHERE title = 'Senior Engineer'
+ORDER BY titles.from_date;
+
 
 
