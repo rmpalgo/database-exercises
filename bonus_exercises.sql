@@ -29,5 +29,16 @@ JOIN titles ON titles.emp_no = dept_emp.emp_no
 WHERE title = 'Senior Engineer'
 ORDER BY titles.from_date;
 
+SELECT titles.from_date, titles.title, COUNT(titles.from_date) AS 'Count'
+FROM titles
+GROUP BY titles.from_date, titles.title
+ORDER BY Count DESC;
+
+SELECT titles.from_date, titles.title, COUNT(titles.from_date) AS 'Count'
+FROM titles
+WHERE titles.title = 'Staff'
+GROUP BY titles.from_date, titles.title
+ORDER BY Count DESC;
+
 
 
